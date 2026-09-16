@@ -3,7 +3,7 @@ import bg from "../assets/authBg.png"
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
-import { userDataContext } from '../context/userContext';
+import { userDataContext } from '../context/UserContext';
 import axios from "axios"
 function SignUp() {
   const [showPassword,setShowPassword]=useState(false)
@@ -33,7 +33,7 @@ try {
 }
     }
   return (
-    <div className='w-full h-[100vh] bg-cover flex justify-center items-center' style={{backgroundImage:`url(${bg})`}} >
+    <div className='w-full h-[100vh] bg-cover flex justify-center items-center' style={{backgroundImage:`linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.95) 100%), url(${bg})`}} >
  <form className='w-[90%] h-[600px] max-w-[500px] bg-[#00000062] backdrop-blur shadow-lg shadow-black flex flex-col items-center justify-center gap-[20px] px-[20px]' onSubmit={handleSignUp}>
 <h1 className='text-white text-[30px] font-semibold mb-[30px]'>Register to <span className='text-blue-400'>Virtual Assistant</span></h1>
 <input type="text" placeholder='Enter your Name' className='w-full h-[60px] outline-none border-2 border-white bg-transparent  text-white placeholder-gray-300 px-[20px] py-[10px] rounded-full text-[18px]' required onChange={(e)=>setName(e.target.value)} value={name}/>

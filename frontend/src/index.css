@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+.draggable {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
