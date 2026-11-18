@@ -51,8 +51,17 @@ app.get("/api/health", (req, res) => {
 app.use("/api/auth", authRouter)
 app.use("/api/user", userRouter)
 
-app.listen(port, () => {
-  connectDb()
-  console.log(`Server started on port ${port}`)
-})
+const startServer = async () => {
+  try {
+    await connectDb()
+    app.listen(port, () => {
+      console.log(`Server started on port ${port}`)
+    })
+  } catch (error) {
+    console.error(`Failed to connect to MongoDB: ${error.message}`)
+    process.exit(1)
+  }
+}
+
+startServer()
 

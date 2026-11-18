@@ -10,6 +10,9 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
+  "engines": {
+    "node": ">=20.0.0 <21.0.0"
+  },
   "dependencies": {
     "@imgly/background-removal-node": "^1.4.5",
     "axios": "^1.9.0",
@@ -25,7 +28,6 @@
     "mongoose": "^8.14.2",
     "multer": "^1.4.5-lts.2",
     "nodemailer": "^6.9.14",
-    "sharp": "^0.35.5",
     "trash": "^10.1.1"
   },
   "devDependencies": {

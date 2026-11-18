@@ -6,6 +6,15 @@ An advanced, voice-driven **Virtual Assistant** that combines the natural intell
 
 ## 🚀 Quick Setup & Running Locally
 
+### MongoDB Atlas (Free Cluster)
+1. In MongoDB Atlas, create an **M0 Free** cluster.
+2. Under **Database Access**, create a database user and save its password.
+3. Under **Network Access**, allow your current IP address.
+4. Choose **Connect > Drivers**, select Node.js, and copy the connection string.
+5. Create `backend/.env` from `backend/.env.example` and set `MONGODB_URL` to that string. Replace the username, password, cluster host, and database name. URL-encode special characters in the password.
+
+Keep `backend/.env` private; it is excluded from Git. The backend now waits for MongoDB to connect before it starts listening.
+
 ### 1. Backend Server
 ```bash
 cd backend
