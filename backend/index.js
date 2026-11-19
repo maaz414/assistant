@@ -15,8 +15,8 @@ app.set("trust proxy", 1)
 
 // Dynamic CORS configuration
 const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:3000",
+  "https://assistant-1-95ab.onrender.com",
+  "https://assistant-1-95ab.onrender.com",
   ...(process.env.FRONTEND_URL ? process.env.FRONTEND_URL.split(",").map(url => url.trim().replace(/\/$/, "")) : [])
 ]
 
